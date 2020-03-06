@@ -48,6 +48,7 @@ export class GeneratorComponent implements OnInit {
   }
 
   generator2D() : void {
+    this.initMatriz();
     this.initCounter();
 
     if (this.hasCharacter()) {
@@ -75,16 +76,20 @@ export class GeneratorComponent implements OnInit {
   }
 
   fill20PercentOfGrid(): void {
-    let matrixSize: number = this.arraySize * this.arraySize;
-    let numberOfItems: number = matrixSize * 0.20;
+    let numberOfItems: number = (this.arraySize * this.arraySize) * 0.20;
+    let maxMiss = numberOfItems * 0.25;
+    console.log('numberOfItems :: ', numberOfItems);
+
     let index = 1;
-    while(index <= numberOfItems) {
+    let miss = 0;
+    while(index < numberOfItems || miss > maxMiss) {
       const i = Math.floor(Math.random() * Math.floor(9));
       const j = Math.floor(Math.random() * Math.floor(9));
       if (this.array[i][j] === '') {
         this.array[i][j] = this.selectedCharacter;
         this.counter[this.selectedCharacter]++;
       }
+      
       index++;
     }
   }
