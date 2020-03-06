@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { debounce } from "debounce"
 // import { Hero } from '../hero';
 // import { HeroService } from '../hero.service';
 
@@ -65,6 +66,10 @@ export class GeneratorComponent implements OnInit {
       }
     }
     console.log(this.counter);
+  }
+
+  onChange(value): void {
+    debounce(this.setSelectedCharacter(value), 4000);
   }
 
   setSelectedCharacter(value): void {
