@@ -6,7 +6,7 @@ import { GeneratorComponent }   from './generator/generator.component';
 // import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/generator', pathMatch: 'full' },
   { path: 'generator', component: GeneratorComponent },
   // { path: 'payments', component: HeroDetailComponent },
 ];
