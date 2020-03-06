@@ -1,0 +1,30 @@
+<div>
+  <div class="character-section">
+    <div class="character-title">
+      <span>CHARACTER</span>
+    </div>
+    <label>
+      <input
+        placeholder="Character"
+        type="text"
+        maxlength="1"
+        (input)="setSelectedCharacter($event.target.value)"
+      />
+    </label>
+  </div>
+  <button class="generator-button" (click)="generator2D()">
+      GENERATOR 2D GRID
+    </button>
+  <div style="clear: both;"></div>
+</div>
+<div class="matrix-section">
+  <div *ngFor="let entry of array">
+    <div class="line-section" *ngFor="let e of entry">
+      <div class="matrix-item">{{ e }}</div>
+    </div>
+  </div>
+  <div>
+    <div class="status">LIVE</div>
+    <div class="code">YOUR CODE: {{ code }}</div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+
+.matrix-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.line-section {
+  display: inline-block;
+}
+
+.matrix-item {
+  border: 1px solid lightgrey;
+  text-align: center;
+  width: 50px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.status:before {
+  content: "• ";
+  color: red;
+  font-weight: 300;
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.code {
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid darkgrey;
+  width: 135px;
+  height: 15px;
+  line-height: 20px;
+  padding: 10px;
+  color: grey;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.character-section {
+  float: left;
+}
+.character-title {
+  padding: 3px;
+  font-size: 10px;
+  color: grey;
+  font-weight: 600;
+}
+
+input {
+  height: 20px;
+  width: 60px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px groove grey;
+}
+
+.generator-button {
+  float: right;
+  padding: 12px;
+  font-weight: 700;
+  border: 1px solid darkgrey;
+  color: white;
+  border-radius: 3px;
+  background-color: darkgrey;
+}
